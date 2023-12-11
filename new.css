@@ -1,0 +1,203 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: "Poppins", "Helvetica Neue", sans-serif;
+}
+
+:root {
+  --primary-color: #39a7ff;
+  --secondary-color: #87c4ff;
+  --tertiary-color: #ffeed9;
+  --for-ground-color: #e0f4ff;
+}
+
+/*  ===== utility Classes ===== */
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+li {
+  list-style: none;
+}
+
+h6 {
+  margin-block: 10px;
+}
+
+.active {
+  color: #30a2ff;
+}
+
+header {
+  width: 100vw;
+  padding-block: 10px;
+  background-color: var(--for-ground-color);
+  position: fixed;
+  top: 0;
+  box-shadow: 0 0 1px #000;
+  z-index: 1000;
+}
+nav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: auto;
+  padding-inline: 30px;
+}
+
+nav h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+nav ul {
+  display: flex;
+  gap: 24px;
+}
+li a {
+  color: #000;
+}
+
+li a:hover {
+  color: #30a2ff;
+}
+
+.search-box{
+  display: flex;
+  align-items: center;
+}
+
+.search-box input {
+  padding-block: 8px;
+  padding-inline: 20px;
+  border: 1px solid var(--secondary-color);
+  border-radius: 6px;
+  color: black;
+}
+.search-box input:active {
+  border: 1px solid solid var(--primay-color);
+}
+.search-box button {
+  padding-block: 8px;
+  padding-inline: 20px;
+  border: none;
+  border-radius: 6px;
+  background-color: var(--primary-color);
+  color: #fff;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+.search-box button img{
+  width: 10px;
+  margin-top: 5px;
+}
+
+.s-btn{
+  display: none;
+}
+
+
+/* ====== News feed section ======= */
+
+.feed {
+  width: 100%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding-inline: 30px;
+  gap: 30px;
+  margin-top: 90px;
+}
+
+.news-card {
+  /* width: 48%; */
+  min-height: 430px;
+  box-shadow: 0 0 4px #a7c3d8;
+  background-color: #eef9ff;
+  overflow: hidden;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.news-card:hover {
+  box-shadow: 1px 1px 8px #a5c4e1;
+  background-color: #e0f4ff;
+  transform: translateY(-3px);
+}
+.news-card .card-header img {
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+}
+.card-content {
+  padding: 12px;
+}
+
+footer {
+  text-align: center;
+  padding-block: 30px;
+  margin-top: 200px;
+}
+
+/* ========================================= */
+/*  -------------- Media Quries ------------ */
+/* ========================================= */
+
+@media (max-width: 1100px) {
+  .feed {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 948px) {
+  nav ul {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .feed {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 519px) {
+
+  .feed{
+    padding-inline: 20px;
+  }
+  nav {
+    padding-inline: 14px;
+  }
+  .search-box input {
+    width: 140px;
+    border-radius:  8px 0 0 8px;
+    
+ }
+ .p-btn{
+  display: none;
+ }
+ .s-btn{
+  display: block;
+ }
+ .search-box button{
+  padding: 8px;
+  margin: 0;
+  border-radius: 0 8px 8px 0;
+ }
+}

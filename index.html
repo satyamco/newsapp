@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News App</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.7.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="new.css">
+</head>
+
+<body >
+   
+    <header>
+        <nav >
+            <a href="#" onclick="reload()"><h2>AIO News</h2></a>
+
+            
+                <ul id="nav-item">
+                    <li><a onclick="navItemClick('business')" id="business" href="#">Business</a></li>
+                    <li><a onclick="navItemClick('Politics')" id="Politics" href="#">Politics</a></li>
+                    <li><a onclick="navItemClick('Entertainment')" id="Entertainment" href="#">Entertainment</a></li>
+                    <li><a onclick="navItemClick('Cricket')" id="Cricket" href="#">Cricket</a></li>
+                </ul>
+      
+
+            <div class="search-box">
+                <input type="text" placeholder="e.g. Space" id="search-input">
+                <button id="search-btn" class="p-btn">Search</button>  
+                <button id="search-btn" class="s-btn"><i class="ri-search-line"></i></button>  
+                
+            </div>
+        </nav>
+    </header>
+
+    <section class="feed">
+        <!-- <div id="cards-container">
+            
+        </div> -->
+    </section>
+
+    <template id="template-news-card">
+        <div class="news-card" >
+            <div class="card-header">
+                <img src="https://via.placeholder.com/400x200" alt="news-image" id="news-img">
+            </div>
+
+            <div class="card-content">
+                <h2 id="news-title">This is the Title</h2>
+                <h6 class="news-source" id="news-source">End Gadget 26/08/2023</h6>
+                <p class="news-desc" id="news-desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae saepe quis voluptatum quisquam vitae doloremque facilis molestias quae ratione cumque!</p>
+            </div>
+        </div>
+    </template>
+
+    <footer>
+        <p>Copyright © 2023 AIO News®. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
